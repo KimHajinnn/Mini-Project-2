@@ -208,3 +208,19 @@
         main()
 
 (Untuk memanggil fungtion "Main()"
+
+**OUTPUT**
+
+![image](https://github.com/user-attachments/assets/aca78ce7-5b2f-4c2d-8ec9-2b2f895d06d5)
+
+![image](https://github.com/user-attachments/assets/f45812b2-2612-494f-b6a9-7ee5659de960)
+
+Output saat tampilan Admin
+
+![image](https://github.com/user-attachments/assets/432d4fbb-b78b-4727-9a8e-acc0285cba21)
+
+![image](https://github.com/user-attachments/assets/56789c8b-870b-47b7-b21b-744f61719495)
+
+Output saat tampilan Jokiers atau Pelanggan
+
+
