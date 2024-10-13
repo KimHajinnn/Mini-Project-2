@@ -204,7 +204,7 @@
 
 (jika memilih opsi 3, maka akan keluar dari sistem)
 
-if __name__ == "__main__":
-    main()
+    if __name__ == "__main__":
+        main()
 
 (Untuk memanggil fungtion "Main()"
