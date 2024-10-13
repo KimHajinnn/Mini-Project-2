@@ -13,29 +13,29 @@
 
 **PENJELASAN**
 
-from prettytable import PrettyTable
+    from prettytable import PrettyTable
 
-Datalist = []
-listdatajokiers = []
+    Datalist = []
+    listdatajokiers = []
 
 ("from prettytable import PrettyTable" untuk membuat table)
 
 ("Datalist = []" & "listdatajokiers = []" untuk menyediakan list kosong)
 
-def tambahlist():
-    table = PrettyTable()
+    def tambahlist():
+        table = PrettyTable()
     
-    #LIST HARGA
-    #"Warrior", "5000/bintang"  
-    #"Elite", "7000/bintang"
-    #"Master", "10000/bintang"
-    #"Grandmaster", "15000/bintang"
-    #"Epic", "20000/bintang"
-    #"Legend", "5000/bintang"
-    #"Mythic", "30000/bintang"
-    #"Mythic Honor", "50000/bintang"
-    #"Mythic Glory", "75000/bintang"
-    "Mythic Immortal", "100000/bintang"
+        #LIST HARGA
+        #"Warrior", "5000/bintang"  
+        #"Elite", "7000/bintang"
+        #"Master", "10000/bintang"
+        #"Grandmaster", "15000/bintang"
+        #"Epic", "20000/bintang"
+        #"Legend", "5000/bintang"
+        #"Mythic", "30000/bintang"
+        #"Mythic Honor", "50000/bintang"
+        #"Mythic Glory", "75000/bintang"
+        "Mythic Immortal", "100000/bintang"
 
   (untuk catatan harga aja)
     
@@ -49,76 +49,76 @@ def tambahlist():
 
 (Untuk "Menambahkan" data pada list) (CREATE)
 
-def tampilkandatalist():
-    table = PrettyTable()
-    table.field_names = ["NO", "Rank", "Harga"]
-
-
-    for list in Datalist :
-        table.add_row([list["NO"], list["Rank"], list["Harga"]])
-        print(table)
+    def tampilkandatalist():
+        table = PrettyTable()
+        table.field_names = ["NO", "Rank", "Harga"]
+    
+    
+        for list in Datalist :
+            table.add_row([list["NO"], list["Rank"], list["Harga"]])
+            print(table)
 
 (Untuk "Menampilkan" data pada list) (READ)
 
-def updatedatalist():
-    listrank = input("Masukkan List Rank yang ingin di update :")
-    for list in Datalist :
-        if list["Rank"] == listrank :
-            updharga = input("Masukkan Harga Terbaru :")
-            list["Harga"] = updharga
-            print("Data berhasil di Update")
-            return
-    print("Data tidak ditemukan")
+    def updatedatalist():
+        listrank = input("Masukkan List Rank yang ingin di update :")
+        for list in Datalist :
+            if list["Rank"] == listrank :
+                updharga = input("Masukkan Harga Terbaru :")
+                list["Harga"] = updharga
+                print("Data berhasil di Update")
+                return
+        print("Data tidak ditemukan")
 
 (Untuk "Mengupdate" atau mengubah data pada list) (UPDATE)
 
-def hapusdata() :
-    listrank = input("Masukkan List Rank yang ingin di hapus :")
-    for list in Datalist :
-        if list["Rank"] == listrank :
-            Datalist.remove(list)
-            print("List telah di hapus")
-            return
-    print("Data tidak ditemukan")
+    def hapusdata() :
+        listrank = input("Masukkan List Rank yang ingin di hapus :")
+        for list in Datalist :
+            if list["Rank"] == listrank :
+                Datalist.remove(list)
+                print("List telah di hapus")
+                return
+        print("Data tidak ditemukan")
 
 (Untuk "menghapus" data pada list) (DELETE)
 
-def datajokiers() :
-    listrank = input("Masukkan Rank saat ini :")
-    for list in Datalist :
-        if list["Rank"] == listrank :
-            namajokiers = input("Masukkan Nama :")
-            harga = list["Harga"]
-            idjokiers = len(listdatajokiers) + 1
-            listdatajokiers.append({"ID Jokiers": idjokiers, "Nama Jokiers": namajokiers, "Rank Jokiers": listrank, "Harga": harga})
-            print(f"Anda Telah Memesan Jasa Dreadersjoki.ID : \n{list["Rank"]} dengan harga {harga}")
-            print("Terimakasih Telah menggunakan Jasa dari Dreadersjoki.ID")
-            return
-    print("Data tidak ditemukan")
+    def datajokiers() :
+        listrank = input("Masukkan Rank saat ini :")
+        for list in Datalist :
+            if list["Rank"] == listrank :
+                namajokiers = input("Masukkan Nama :")
+                harga = list["Harga"]
+                idjokiers = len(listdatajokiers) + 1
+                listdatajokiers.append({"ID Jokiers": idjokiers, "Nama Jokiers": namajokiers, "Rank Jokiers": listrank, "Harga": harga})
+                print(f"Anda Telah Memesan Jasa Dreadersjoki.ID : \n{list["Rank"]} dengan harga {harga}")
+                print("Terimakasih Telah menggunakan Jasa dari Dreadersjoki.ID")
+                return
+        print("Data tidak ditemukan")
 
 (Untuk "Membuat" data Jokiers atau pelanggan)
 
-def tampilandatajokiers() :
-    table = PrettyTable()
-    table.field_names = ["Nama Jokiers", "Rank Jokiers", "Rank Tujuan Jokiers", "Harga"]
-    for listjokiers in listdatajokiers :
-        table.add_row([listjokiers["Nama Jokiers"], listjokiers["Rank Jokiers"], listjokiers["Rank Tujuan"], listjokiers["Harga"]])
-    print(table)
+    def tampilandatajokiers() :
+        table = PrettyTable()
+        table.field_names = ["Nama Jokiers", "Rank Jokiers", "Rank Tujuan Jokiers", "Harga"]
+        for listjokiers in listdatajokiers :
+            table.add_row([listjokiers["Nama Jokiers"], listjokiers["Rank Jokiers"], listjokiers["Rank Tujuan"], listjokiers["Harga"]])
+        print(table)
 
 (Untuk "Menampilkan" Data Jokiers atau Pelanggan) (READ)
 
-def main () :
-    while True :
-        table = PrettyTable()
-
-        table.field_names = ["Opsi", "Selamat datang di Dreadersjoki.ID", "DREADERSJOKI.ID"]
-
-        table.add_row(["1", "Admin", "DREADERSJOKI.ID"])
-        table.add_row(["2", "Jokiers", "DREADERSJOKI.ID"])
-        table.add_row(["3", "EXIT", "DREADERSJOKI.ID"])
-
-        print(table)
-        opsi = input("Masukkan Opsi yang dipilih :")
+    def main () :
+        while True :
+            table = PrettyTable()
+    
+            table.field_names = ["Opsi", "Selamat datang di Dreadersjoki.ID", "DREADERSJOKI.ID"]
+    
+            table.add_row(["1", "Admin", "DREADERSJOKI.ID"])
+            table.add_row(["2", "Jokiers", "DREADERSJOKI.ID"])
+            table.add_row(["3", "EXIT", "DREADERSJOKI.ID"])
+    
+            print(table)
+            opsi = input("Masukkan Opsi yang dipilih :")
 
 (Menggunakan while True untuk melakukan pengulangan)
 
